@@ -3,14 +3,14 @@ locals {
 
   security_rules = [
     {
-      name                       = "ssh"
-      priority                   = 1000
-      direction                  = "Inbound"
-      access                     = "Allow"
-      protocol                   = "Tcp"
-      source_port_range          = "*"
-      destination_port_range     = "22"
+      name                   = "ssh"
+      priority               = 1000
+      direction              = "Inbound"
+      access                 = "Allow"
+      protocol               = "Tcp"
+      source_port_range      = "*"
+      destination_port_range = "22"
     }
-]
+  ]
 }
 

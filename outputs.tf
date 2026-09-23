@@ -1,11 +1,11 @@
 output "vm_names_upper" {
-    value = [for vm in azurerm_virtual_machine.main : upper(vm.name)]
+  value = [for vm in azurerm_virtual_machine.main : upper(vm.name)]
 }
 
 output "vm_tags_joined" {
-    value = join(", ", [for vm in azurerm_virtual_machine.main : vm.tags.environment])
+  value = join(", ", [for vm in azurerm_virtual_machine.main : vm.tags.environment])
 }
 
 output "vm_ids" {
-    value = [for vm in azurerm_virtual_machine.main : vm.id]
+  value = [for vm in azurerm_virtual_machine.main : vm.id]
 }
